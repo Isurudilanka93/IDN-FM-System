@@ -1,0 +1,18 @@
+
+CREATE DATABASE IF NOT EXISTS fm_system;
+USE fm_system;
+
+CREATE TABLE IF NOT EXISTS workorders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    status VARCHAR(50),
+    assigned_to VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS assets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    location VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
